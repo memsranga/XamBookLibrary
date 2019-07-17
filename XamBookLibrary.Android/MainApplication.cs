@@ -3,7 +3,7 @@ using Android.App;
 using Android.Runtime;
 using Plugin.CurrentActivity;
 
-namespace Booky.Droid
+namespace XamBookLibrary.Droid
 {
     public class MainApplication : Application
     {

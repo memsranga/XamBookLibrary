@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Booky.Views
+namespace XamBookLibrary.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookDetailPage : ContentPage

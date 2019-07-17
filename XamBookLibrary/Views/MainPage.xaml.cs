@@ -1,10 +1,10 @@
 ﻿using System;
-using Booky.Models;
-using Booky.Services;
+using XamBookLibrary.Models;
+using XamBookLibrary.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Booky.Views
+namespace XamBookLibrary.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage

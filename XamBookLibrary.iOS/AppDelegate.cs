@@ -6,7 +6,7 @@ using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
 using UIKit;
 
-namespace Booky.iOS
+namespace XamBookLibrary.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 

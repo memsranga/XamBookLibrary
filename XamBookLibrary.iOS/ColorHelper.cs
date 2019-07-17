@@ -1,11 +1,11 @@
 ﻿using System;
-using Booky.iOS;
-using Booky.Services;
+using XamBookLibrary.iOS;
+using XamBookLibrary.Services;
 using ColorThiefDotNet;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(ColorHelper))]
-namespace Booky.iOS
+namespace XamBookLibrary.iOS
 {
     public class ColorHelper : IColorHelper
     {

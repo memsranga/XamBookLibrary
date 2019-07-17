@@ -7,9 +7,9 @@ using Plugin.CurrentActivity;
 using ImageCircle.Forms.Plugin.Droid;
 using CarouselView.FormsPlugin.Android;
 
-namespace Booky.Droid
+namespace XamBookLibrary.Droid
 {
-    [Activity(Label = "Booky", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "XamBookLibrary", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

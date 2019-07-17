@@ -1,13 +1,13 @@
 ﻿using System;
 using Android.Graphics;
-using Booky.Droid;
-using Booky.Services;
+using XamBookLibrary.Droid;
+using XamBookLibrary.Services;
 using ColorThiefDotNet;
 using Plugin.CurrentActivity;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(ColorHelper))]
-namespace Booky.Droid
+namespace XamBookLibrary.Droid
 {
     public class ColorHelper : IColorHelper
     {

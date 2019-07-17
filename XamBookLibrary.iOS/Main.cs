@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Booky.iOS
+namespace XamBookLibrary.iOS
 {
     public class Application
     {

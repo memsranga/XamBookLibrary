@@ -1,8 +1,8 @@
 ﻿using System;
-using Booky.Views;
+using XamBookLibrary.Views;
 using Xamarin.Forms;
 
-namespace Booky
+namespace XamBookLibrary
 {
     public partial class App : Application
     {

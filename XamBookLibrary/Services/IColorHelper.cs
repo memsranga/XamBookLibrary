@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace Booky.Services
+namespace XamBookLibrary.Services
 {
     public interface IColorHelper
     {

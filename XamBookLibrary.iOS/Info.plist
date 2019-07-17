@@ -23,15 +23,15 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>Booky</string>
+	<string>XamBookLibrary</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.shanranm.Booky</string>
+	<string>com.shanranm.XamBookLibrary</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
-	<string>Booky</string>
+	<string>XamBookLibrary</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIAppFonts</key>

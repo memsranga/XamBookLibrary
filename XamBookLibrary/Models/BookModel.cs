@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Booky.Models
+namespace XamBookLibrary.Models
 {
     public class BookModel
     {
