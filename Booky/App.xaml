@@ -1,5 +1,54 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Booky.App">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application x:Class="Booky.App"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
+        <OnPlatform x:Key="TextBold" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Ubuntu Bold" />
+            <On Platform="Android" Value="Ubuntu-Bold.ttf#Ubuntu Bold" />
+        </OnPlatform>
+        <OnPlatform x:Key="TextLight" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Ubuntu Light" />
+            <On Platform="Android" Value="Ubuntu-Light.ttf#Ubuntu Light" />
+        </OnPlatform>
+        <OnPlatform x:Key="TextRegular" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Ubuntu Regular" />
+            <On Platform="Android" Value="Ubuntu-Regular.ttf#Ubuntu Regular" />
+        </OnPlatform>
+
+        <Color x:Key="HeaderColor">#000000</Color>
+
+        <Style x:Key="HeaderLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextBold}" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="TextColor" Value="{StaticResource HeaderColor}" />
+        </Style>
+
+        <Style x:Key="AuthorLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextRegular}" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="{StaticResource HeaderColor}" />
+        </Style>
+
+        <Style x:Key="GenreLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource HeaderColor}" />
+        </Style>
+
+        <Style x:Key="ChipFrame" TargetType="Frame">
+            <Setter Property="HasShadow" Value="False" />
+            <Setter Property="BackgroundColor" Value="#f3f3f3" />
+            <Setter Property="CornerRadius" Value="14" />
+            <Setter Property="Padding" Value="20, 6, 20, 6" />
+            <Setter Property="Margin" Value="0" />
+        </Style>
+
+        <Style x:Key="ChipLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource HeaderColor}" />
+        </Style>
     </Application.Resources>
 </Application>

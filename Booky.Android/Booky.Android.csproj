@@ -51,7 +51,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
@@ -59,7 +59,10 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -88,6 +91,24 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hamburger.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\profile_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hamburger.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\profile_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hamburger.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\profile_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hamburger.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable\hamburger.png" />
+    <AndroidResource Include="Resources\drawable\profile_icon.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable\coffee.jpeg" />
+    <AndroidResource Include="Resources\drawable\men_wo_women.jpeg" />
+    <AndroidResource Include="Resources\drawable\plant.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -101,6 +122,11 @@
       <Project>{067ED016-8076-4FA3-A141-6CD2640E09B4}</Project>
       <Name>Booky</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Ubuntu-Bold.ttf" />
+    <AndroidAsset Include="Assets\Ubuntu-Light.ttf" />
+    <AndroidAsset Include="Assets\Ubuntu-Regular.ttf" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

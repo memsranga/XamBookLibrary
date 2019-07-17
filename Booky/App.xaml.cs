@@ -1,6 +1,6 @@
 ﻿using System;
+using Booky.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Booky
 {

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="Booky.Views.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:imageCircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:models="clr-namespace:Booky.Models"
+             xmlns:rainbows="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows"
+             ios:Page.UseSafeArea="True"
+             rainbows:DebugRainbow.IsDebug="False">
+    <StackLayout Padding="0" Spacing="0">
+        <!--  Header  -->
+        <StackLayout Padding="20,0,20,0"
+                     Orientation="Horizontal"
+                     Spacing="20">
+            <imageCircle:CircleImage Source="profile_icon" HorizontalOptions="StartAndExpand" />
+            <Image Source="search" HorizontalOptions="End" />
+            <Image Source="hamburger" HorizontalOptions="End" />
+        </StackLayout>
+
+        <!--  Checked Out  -->
+        <Grid Padding="20"
+              HeightRequest="250"
+              ColumnSpacing="20"
+              RowSpacing="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.ColumnSpan="2"
+                   Style="{StaticResource HeaderLabel}"
+                   Text="Checked out" />
+            <Frame Grid.Row="1"
+                   Grid.RowSpan="5"
+                   Grid.Column="0"
+                   Margin="0"
+                   Padding="0"
+                   CornerRadius="10"
+                   HasShadow="False"
+                   IsClippedToBounds="True">
+                <Image Aspect="AspectFill" Source="plant.jpeg" />
+            </Frame>
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Style="{StaticResource HeaderLabel}"
+                   Text="The Making of a Manager" />
+            <Label Grid.Row="2"
+                   Grid.Column="1"
+                   Style="{StaticResource AuthorLabel}"
+                   Text="Julie Zhuo" />
+            <Label Grid.Row="3"
+                   Grid.Column="1"
+                   Style="{StaticResource GenreLabel}"
+                   Text="Business" />
+            <Frame Grid.Row="5"
+                   Grid.Column="1"
+                   Margin="0"
+                   Padding="20"
+                   BackgroundColor="#ebc3b9"
+                   CornerRadius="5"
+                   HasShadow="False"
+                   HorizontalOptions="Start">
+                <Label Style="{StaticResource AuthorLabel}"
+                       Text="Jun 6"
+                       TextColor="#FFFFFF" />
+            </Frame>
+        </Grid>
+
+        <StackLayout Padding="0,0,0,10" Spacing="10">
+            <StackLayout Padding="20,0,20,10" Orientation="Horizontal">
+                <Label Style="{StaticResource HeaderLabel}"
+                       Text="Recommended"
+                       HorizontalOptions="FillAndExpand" />
+                <Label Style="{StaticResource AuthorLabel}"
+                       Text="See all"
+                       HorizontalOptions="End" />
+            </StackLayout>
+            <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Frame Style="{StaticResource ChipFrame}">
+                        <Label Style="{StaticResource ChipLabel}" Text="Fiction" />
+                    </Frame>
+                    <Frame Style="{StaticResource ChipFrame}">
+                        <Label Style="{StaticResource ChipLabel}" Text="Memoir" />
+                    </Frame>
+                    <Frame Style="{StaticResource ChipFrame}">
+                        <Label Style="{StaticResource ChipLabel}" Text="Travel" />
+                    </Frame>
+                    <Frame Style="{StaticResource ChipFrame}">
+                        <Label Style="{StaticResource ChipLabel}" Text="Business" />
+                    </Frame>
+                    <Frame Style="{StaticResource ChipFrame}">
+                        <Label Style="{StaticResource ChipLabel}" Text="Science fiction" />
+                    </Frame>
+                    <Frame Style="{StaticResource ChipFrame}">
+                        <Label Style="{StaticResource ChipLabel}" Text="Fantasy" />
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+        <ListView Margin="0"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="None"
+                  VerticalScrollBarVisibility="Never"
+                  VerticalOptions="FillAndExpand">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type models:BookModel}">
+                    <models:BookModel Title="Men Without Women"
+                                      Author="Haruki Murakami"
+                                      Cover="men_wo_women.jpeg"
+                                      Genre="Fiction" />
+                    <models:BookModel Title="In Altre Parole"
+                                      Author="Jhumpa Lahiri"
+                                      Cover="coffee.jpeg"
+                                      Genre="Memoir" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20"
+                              HeightRequest="150"
+                              ColumnSpacing="20"
+                              RowSpacing="8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.RowSpan="4"
+                                   Margin="0"
+                                   Padding="0"
+                                   CornerRadius="10"
+                                   HasShadow="False"
+                                   IsClippedToBounds="True">
+                                <Image Aspect="AspectFill" Source="{Binding Cover}" />
+                            </Frame>
+                            <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Style="{StaticResource HeaderLabel}"
+                                   Text="{Binding Title}" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Style="{StaticResource AuthorLabel}"
+                                   Text="{Binding Author}" />
+                            <Label Grid.Row="2"
+                                   Grid.Column="1"
+                                   Style="{StaticResource GenreLabel}"
+                                   Text="{Binding Genre}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

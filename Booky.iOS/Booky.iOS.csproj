@@ -124,8 +124,11 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.0.0.5</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -133,5 +136,22 @@
       <Project>{067ED016-8076-4FA3-A141-6CD2640E09B4}</Project>
       <Name>Booky</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hamburger.png" />
+    <BundleResource Include="Resources\hamburger%402x.png" />
+    <BundleResource Include="Resources\hamburger%403x.png" />
+    <BundleResource Include="Resources\profile_icon.png" />
+    <BundleResource Include="Resources\profile_icon%402x.png" />
+    <BundleResource Include="Resources\profile_icon%403x.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\search%402x.png" />
+    <BundleResource Include="Resources\search%403x.png" />
+    <BundleResource Include="Resources\Ubuntu-Bold.ttf" />
+    <BundleResource Include="Resources\Ubuntu-Light.ttf" />
+    <BundleResource Include="Resources\Ubuntu-Regular.ttf" />
+    <BundleResource Include="Resources\coffee.jpeg" />
+    <BundleResource Include="Resources\men_wo_women.jpeg" />
+    <BundleResource Include="Resources\plant.jpeg" />
   </ItemGroup>
 </Project>
