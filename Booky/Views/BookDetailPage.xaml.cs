@@ -19,6 +19,7 @@ namespace Booky.Views
         protected override async void OnAppearing()
         {
             await cakeDetail.TranslateTo(0, header.Y, 500, Easing.SinOut);
+            await header.FadeTo(1);
             base.OnAppearing();
         }
 
@@ -26,17 +27,13 @@ namespace Booky.Views
         {
             _pageHeight = height;
             cakeDetail.TranslationY = _pageHeight * .65;
+            header.FadeTo(0, 0);
             base.OnSizeAllocated(width, height);
         }
 
         async void Handle_Tapped(object sender, System.EventArgs e)
         {
             await Navigation.PopModalAsync();
-        }
-
-        void Handle_ScrollToRequested(object sender, Xamarin.Forms.ScrollToRequestEventArgs e)
-        {
-            
         }
     }
 }
