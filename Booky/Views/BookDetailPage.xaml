@@ -30,25 +30,31 @@
                              HasShadow="false"
                              VerticalOptions="FillAndExpand">
             <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
-                <ScrollView Margin="0"
-                            Padding="0"
-                            HorizontalScrollBarVisibility="Never"
-                            Orientation="Horizontal">
-                    <StackLayout Margin="0"
-                                 Padding="0"
-                                 Orientation="Horizontal"
-                                 Spacing="20">
-                        <Frame Style="{StaticResource DetailCarousalFrame}">
-                            <Image Aspect="AspectFill" Source="men_wo_women.jpeg" />
-                        </Frame>
-                        <Frame Style="{StaticResource DetailCarousalFrame}">
-                            <Image Aspect="AspectFill" Source="plant.jpeg" />
-                        </Frame>
-                        <Frame Style="{StaticResource DetailCarousalFrame}">
-                            <Image Aspect="AspectFill" Source="coffee.jpeg" />
-                        </Frame>
-                    </StackLayout>
-                </ScrollView>
+                <CollectionView Margin="0">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type sys:String}">
+                            <sys:String>men_wo_women.jpeg</sys:String>
+                            <sys:String>plant.jpeg</sys:String>
+                            <sys:String>coffee.jpeg</sys:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemsLayout>
+                        <ListItemsLayout ItemSpacing="20"
+                                         SnapPointsAlignment="Start,End"
+                                         SnapPointsType="None">
+                            <x:Arguments>
+                                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
+                            </x:Arguments>
+                        </ListItemsLayout>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Style="{StaticResource DetailCarousalFrame}">
+                                <Image Aspect="AspectFill" Source="{Binding .}" />
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
                 <Label Style="{StaticResource HeaderLabel}" Text="The Making of a Manager" />
                 <Label Style="{StaticResource AuthorLabel}" Text="Julie Zhuo" />
                 <Label Style="{StaticResource GenreLabel}" Text="Business" />

@@ -60,7 +60,7 @@
 
         <Style x:Key="DetailCarousalFrame" TargetType="Frame">
             <Setter Property="HasShadow" Value="False" />
-            <Setter Property="WidthRequest" Value="150" />
+            <Setter Property="WidthRequest" Value="175" />
             <Setter Property="HeightRequest" Value="200" />
             <Setter Property="CornerRadius" Value="10" />
             <Setter Property="Padding" Value="0" />

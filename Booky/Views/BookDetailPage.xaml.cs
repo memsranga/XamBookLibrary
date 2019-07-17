@@ -33,5 +33,10 @@ namespace Booky.Views
         {
             await Navigation.PopModalAsync();
         }
+
+        void Handle_ScrollToRequested(object sender, Xamarin.Forms.ScrollToRequestEventArgs e)
+        {
+            
+        }
     }
 }
