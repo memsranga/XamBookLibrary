@@ -69,6 +69,9 @@
     <PackageReference Include="Plugin.CurrentActivity">
       <Version>2.1.0.4</Version>
     </PackageReference>
+    <PackageReference Include="CarouselView.FormsPlugin">
+      <Version>5.2.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -117,6 +120,11 @@
     <AndroidResource Include="Resources\drawable\coffee.jpeg" />
     <AndroidResource Include="Resources\drawable\men_wo_women.jpeg" />
     <AndroidResource Include="Resources\drawable\plant.jpeg" />
+    <AndroidResource Include="Resources\drawable\back.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\back.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

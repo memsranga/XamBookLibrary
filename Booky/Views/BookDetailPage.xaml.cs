@@ -9,7 +9,20 @@ namespace Booky.Views
     {
         public BookDetailPage(string backgroundColor)
         {
+            BackgroundColor = Color.FromHex(backgroundColor);
             InitializeComponent();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // delay and translate the details
+        }
+
+        async void Handle_Tapped(object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }

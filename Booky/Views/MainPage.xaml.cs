@@ -20,7 +20,7 @@ namespace Booky.Views
             var selectedCover = (e.Item as BookModel).Cover;
             var colorHelper = DependencyService.Get<IColorHelper>();
             var dominantColor = colorHelper.GetColor(selectedCover);
-            await Navigation.PushModalAsync(new BookDetailPage(dominantColor));
+            await Navigation.PushModalAsync(new BookDetailPage(dominantColor), true);
         }
     }
 }

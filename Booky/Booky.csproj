@@ -15,6 +15,8 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.Forms.DebugRainbows" Version="1.0.7" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.0.21" />
+    <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />

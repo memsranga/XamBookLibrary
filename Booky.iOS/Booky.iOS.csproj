@@ -133,6 +133,9 @@
     <PackageReference Include="ksemenenko.ColorThief">
       <Version>1.1.1.4</Version>
     </PackageReference>
+    <PackageReference Include="CarouselView.FormsPlugin">
+      <Version>5.2.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -157,5 +160,8 @@
     <BundleResource Include="Resources\coffee.jpeg" />
     <BundleResource Include="Resources\men_wo_women.jpeg" />
     <BundleResource Include="Resources\plant.jpeg" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\back%402x.png" />
+    <BundleResource Include="Resources\back%403x.png" />
   </ItemGroup>
 </Project>

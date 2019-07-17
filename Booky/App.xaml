@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application x:Class="Booky.App"
              xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
     <Application.Resources>
         <OnPlatform x:Key="TextBold" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Ubuntu Bold" />
@@ -17,6 +18,11 @@
         </OnPlatform>
 
         <Color x:Key="HeaderColor">#000000</Color>
+
+        <Style ApplyToDerivedTypes="True" TargetType="ContentPage">
+            <Setter Property="ios:Page.UseSafeArea" Value="True" />
+            <Setter Property="ios:Page.PrefersHomeIndicatorAutoHidden" Value="True" />
+        </Style>
 
         <Style x:Key="HeaderLabel" TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource TextBold}" />
