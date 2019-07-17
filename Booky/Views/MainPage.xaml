@@ -112,7 +112,8 @@
                   HasUnevenRows="True"
                   SeparatorVisibility="None"
                   VerticalScrollBarVisibility="Never"
-                  VerticalOptions="FillAndExpand">
+                  VerticalOptions="FillAndExpand"
+                  ItemTapped="Handle_ItemTapped">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type models:BookModel}">
                     <models:BookModel Title="Men Without Women"
@@ -131,7 +132,8 @@
                         <Grid Padding="20"
                               HeightRequest="150"
                               ColumnSpacing="20"
-                              RowSpacing="8">
+                              RowSpacing="8"
+                              BackgroundColor="Transparent">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
