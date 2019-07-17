@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,6 +8,8 @@ namespace Booky.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookDetailPage : ContentPage
     {
+        private double _pageHeight;
+
         public BookDetailPage(string backgroundColor)
         {
             BackgroundColor = Color.FromHex(backgroundColor);
@@ -15,9 +18,15 @@ namespace Booky.Views
 
         protected override async void OnAppearing()
         {
+            await cakeDetail.TranslateTo(0, header.Y, 500, Easing.SinOut);
             base.OnAppearing();
+        }
 
-            // delay and translate the details
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            _pageHeight = height;
+            cakeDetail.TranslationY = _pageHeight * .65;
+            base.OnSizeAllocated(width, height);
         }
 
         async void Handle_Tapped(object sender, System.EventArgs e)

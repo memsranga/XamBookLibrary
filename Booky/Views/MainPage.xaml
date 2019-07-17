@@ -7,7 +7,7 @@
              xmlns:rainbows="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows"
              rainbows:DebugRainbow.IsDebug="False">
     <StackLayout Padding="0" Spacing="0">
-        <!--  Header  -->
+        <!--Header-->
         <StackLayout Padding="20,0,20,0"
                      Orientation="Horizontal"
                      Spacing="20">
@@ -16,7 +16,7 @@
             <Image Source="hamburger" HorizontalOptions="End" />
         </StackLayout>
 
-        <!--  Checked Out  -->
+        <!--Checked Out-->
         <Grid Padding="20"
               HeightRequest="250"
               ColumnSpacing="20"
@@ -108,10 +108,10 @@
 
         <ListView Margin="0"
                   HasUnevenRows="True"
+                  ItemTapped="Handle_ItemTapped"
                   SeparatorVisibility="None"
                   VerticalScrollBarVisibility="Never"
-                  VerticalOptions="FillAndExpand"
-                  ItemTapped="Handle_ItemTapped">
+                  VerticalOptions="FillAndExpand">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type models:BookModel}">
                     <models:BookModel Title="Men Without Women"
@@ -129,9 +129,9 @@
                     <ViewCell>
                         <Grid Padding="20"
                               HeightRequest="150"
+                              BackgroundColor="Transparent"
                               ColumnSpacing="20"
-                              RowSpacing="8"
-                              BackgroundColor="Transparent">
+                              RowSpacing="8">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />

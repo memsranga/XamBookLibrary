@@ -4,9 +4,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              xmlns:panCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib">
-    <StackLayout>
-        <StackLayout Padding="20,0,20,0"
+             xmlns:rainbows="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             rainbows:DebugRainbow.IsDebug="False">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout x:Name="header"
+                     Padding="20,30,20,30"
                      Orientation="Horizontal"
                      Spacing="20">
             <Image Source="back" />
@@ -19,32 +22,54 @@
                 <TapGestureRecognizer Tapped="Handle_Tapped" />
             </StackLayout.GestureRecognizers>
         </StackLayout>
-        <panCake:PancakeView Padding="30,40,0,0"
+        <panCake:PancakeView x:Name="cakeDetail"
+                             Margin="0"
+                             Padding="50,50,0,0"
                              BackgroundColor="#ffffff"
-                             CornerRadius="30, 30, 0, 0"
+                             CornerRadius="30,30,0,0"
                              HasShadow="false"
                              VerticalOptions="FillAndExpand">
-            <carousel:CarouselViewControl HeightRequest="300" InterPageSpacing="20">
-                <carousel:CarouselViewControl.ItemsSource>
-                    <x:Array Type="{x:Type sys:String}">
-                        <sys:String>men_wo_women.jpeg</sys:String>
-                        <sys:String>men_wo_women.jpeg</sys:String>
-                        <sys:String>men_wo_women.jpeg</sys:String>
-                    </x:Array>
-                </carousel:CarouselViewControl.ItemsSource>
-                <carousel:CarouselViewControl.ItemTemplate>
-                    <DataTemplate>
-                        <Frame Margin="0"
-                               Padding="0"
-                               CornerRadius="10"
-                               HasShadow="False"
-                               IsClippedToBounds="True">
-                            <Image Aspect="AspectFill" Source="{Binding .}" />
+            <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
+                <ScrollView Margin="0"
+                            Padding="0"
+                            HorizontalScrollBarVisibility="Never"
+                            Orientation="Horizontal">
+                    <StackLayout Margin="0"
+                                 Padding="0"
+                                 Orientation="Horizontal"
+                                 Spacing="20">
+                        <Frame Style="{StaticResource DetailCarousalFrame}">
+                            <Image Aspect="AspectFill" Source="men_wo_women.jpeg" />
                         </Frame>
-                    </DataTemplate>
-                </carousel:CarouselViewControl.ItemTemplate>
-            </carousel:CarouselViewControl>
+                        <Frame Style="{StaticResource DetailCarousalFrame}">
+                            <Image Aspect="AspectFill" Source="plant.jpeg" />
+                        </Frame>
+                        <Frame Style="{StaticResource DetailCarousalFrame}">
+                            <Image Aspect="AspectFill" Source="coffee.jpeg" />
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+                <Label Style="{StaticResource HeaderLabel}" Text="The Making of a Manager" />
+                <Label Style="{StaticResource AuthorLabel}" Text="Julie Zhuo" />
+                <Label Style="{StaticResource GenreLabel}" Text="Business" />
+                <Label Margin="20,10,20,0"
+                       FontAttributes="None"
+                       FontSize="14"
+                       Style="{StaticResource AuthorLabel}"
+                       Text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source"
+                       VerticalOptions="FillAndExpand" />
+                <panCake:PancakeView Padding="35"
+                                     BackgroundColor="#99cbe4"
+                                     CornerRadius="60,0,0,0"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="End">
+                    <Label Style="{StaticResource AuthorLabel}"
+                           Text="Checkout"
+                           TextColor="#ffffff"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </panCake:PancakeView>
+            </StackLayout>
         </panCake:PancakeView>
-        <BoxView />
     </StackLayout>
 </ContentPage>
