@@ -21,7 +21,6 @@ namespace XamBookLibrary.Droid
 
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             CarouselViewRenderer.Init();
             ImageCircleRenderer.Init();

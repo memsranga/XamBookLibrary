@@ -3,6 +3,7 @@ using XamBookLibrary.Models;
 using XamBookLibrary.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Linq;
 
 namespace XamBookLibrary.Views
 {
@@ -14,10 +15,15 @@ namespace XamBookLibrary.Views
             InitializeComponent();
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        async void Handle_ItemTapped(object sender, SelectionChangedEventArgs e)
         {
-            ((ListView)sender).SelectedItem = null;
-            var selectedCover = (e.Item as BookModel).Cover;
+            if (e.CurrentSelection.Count == 0)
+            {
+                return;
+            }
+
+            ((CollectionView)sender).SelectedItem = null;
+            var selectedCover = (e.CurrentSelection?.First() as BookModel).Cover;
             var colorHelper = DependencyService.Get<IColorHelper>();
             var dominantColor = colorHelper.GetColor(selectedCover);
             await Navigation.PushModalAsync(new BookDetailPage(dominantColor), true);
