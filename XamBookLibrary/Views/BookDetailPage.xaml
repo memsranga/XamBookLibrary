@@ -30,7 +30,8 @@
                              HasShadow="false"
                              VerticalOptions="FillAndExpand">
             <StackLayout Spacing="10" VerticalOptions="FillAndExpand">
-                <CollectionView Margin="0">
+                <CollectionView Margin="0"
+                                HorizontalScrollBarVisibility="Never">
                     <CollectionView.ItemsSource>
                         <x:Array Type="{x:Type sys:String}">
                             <sys:String>men_wo_women.jpeg</sys:String>
@@ -39,13 +40,10 @@
                         </x:Array>
                     </CollectionView.ItemsSource>
                     <CollectionView.ItemsLayout>
-                        <ListItemsLayout ItemSpacing="20"
-                                         SnapPointsAlignment="Start,End"
-                                         SnapPointsType="None">
-                            <x:Arguments>
-                                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>
-                            </x:Arguments>
-                        </ListItemsLayout>
+                        <LinearItemsLayout ItemSpacing="20"
+                                           Orientation="Horizontal"
+                                           SnapPointsType="Mandatory"
+                                           SnapPointsAlignment="End" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
